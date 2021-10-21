@@ -5,39 +5,31 @@ import Grid from '@mui/material/Grid';
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
 import Alert from '@mui/material/Alert';
+import Search from './components/Search/Search';
+import Item from './components/Item';
+import Auth from './components/Auth/Auth';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import counter from './store/counter';
 
 export const App = () => {
 
-  const [alert,setAlert] = useState(false);
+  const clickHandler = (e) =>{
+
+    console.log('у', e);
+  }
 
   return (
     <div>
-      <button onClick={()=>setAlert(true)}>yeas</button>
-      {alert && <Alert severity="error">This is an error alert — check it out!</Alert>}
+    <Header/>
+      {counter.count}
+      <Auth/>
+      <Test onClick={clickHandler} width='200px' height='300px'>
+        test!!!
+      </Test>
+
+      <Footer/>
     </div>
   );
+
 };
-
-/*
-export const App = () => {
-  return (
-    <div className='counter'>
-
-
-
-        <Test width='250px' height='200px'>
-            <button>345345!</button>
-            TEST5
-            <p>HI</p>
-        </Test>
-
-
-      <FormControl>
-        <Input id="my-input" aria-describedby="my-helper-text" />
-      </FormControl>
-    </div>
-  );
-};
-
-
- */
