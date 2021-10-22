@@ -64,7 +64,7 @@ export const App = () => {
         test!!!
       </Test>
 
-      <UserList users={users}/>
+
 
       <Footer/>
     </div>
