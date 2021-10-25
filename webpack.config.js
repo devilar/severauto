@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devServer: {
-        port:3200
+        port:3200,
+        historyApiFallback: true,
     },
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
