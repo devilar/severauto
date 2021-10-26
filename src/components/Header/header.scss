@@ -1,4 +1,13 @@
 .header{
   min-height:100px;
   background: #00ACC1;
+  position:relative;
+
+
+  .logo {
+    position: absolute;
+    left: 40px;
+    top: calc(50% - 22px);
+  }
+
 }

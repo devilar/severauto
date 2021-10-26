@@ -8,8 +8,8 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 const Admin = () => {
   return (
    <Grid container spacing={0}>
-     <Grid spacing={0} item xs={1}><Sidebar/></Grid>
-     <Grid item xs={11}>
+     <Grid spacing={0} item xs={2}><Sidebar/></Grid>
+     <Grid item xs={10}>
       <Header/>
       admin
       <Footer/>

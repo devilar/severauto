@@ -14,18 +14,22 @@ import UserList from './components/UserList';
 import { IUser } from './types/types';
 import { Switch } from 'react-router-dom';
 import './style.scss';
+import './reset.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import Registration from './pages/Registration/Registration';
 import HomePage from './pages/HomePage/HomePage';
 import Admin from './pages/Admin/Admin';
 import NotFound from './pages/NotFound/NotFound';
 import Auth from './pages/Auth/Auth';
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import Loader from './components/Loader/Loader';
+
 
 
 
 export const App = () => {
 
-
+  const [stateBar, setStateBar] = useState(false);
   return(
     <BrowserRouter>
       <Switch>
@@ -34,9 +38,17 @@ export const App = () => {
         <Route path='/registration' component={Registration} />
         <Route path='/admin' component={Admin} />
         <Route path='/auth' component={Auth} />
+        <Route path='/forgotpassword' component={ForgotPassword} />
         <Route component={NotFound}/>
       </Switch>
+
+
+      {stateBar&& <Loader/>}
+
     </BrowserRouter>
+
+
+
   )
 
 

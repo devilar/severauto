@@ -6,6 +6,8 @@ import * as yup from 'yup';
 import {PrimaryButton} from '../Button/Button';
 import { Container } from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
+import ErrorContainer from '../ErrorContainer/ErrorContainer';
+import axios from 'axios';
 
 const schema = yup.object().shape({
   login:yup.string().min(3).max(10).required("Обязательное поле"),
@@ -16,7 +18,10 @@ const schema = yup.object().shape({
 const RegForm = () => {
 
   const submitHandler = (data) => {
-    console.log('good!', data);
+    axios.post(`https://jsonplaceholder.typicode.com/users`, { id:1, title:'sar'})
+      .then(res => {
+        console.log('test',res.data);
+      })
   }
 
   const {register, handleSubmit, formState:{ errors }} = useForm({
@@ -27,6 +32,9 @@ const RegForm = () => {
   return (
     <div>
       <Container maxWidth="sm">
+
+      <ErrorContainer/>
+
       <Form onSubmit={handleSubmit(submitHandler)}>
         <Input
           {...register('login')}
@@ -56,7 +64,7 @@ const RegForm = () => {
           helperText={errors?.repeatPassword?.message}
         />
 
-        <PrimaryButton fullWidth>Зарегестрироваться</PrimaryButton>
+        <PrimaryButton color="primary" fullWidth>Зарегестрироваться</PrimaryButton>
       </Form>
       </Container>
 
