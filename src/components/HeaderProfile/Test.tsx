@@ -27,11 +27,12 @@ export default function ClickAway() {
     bgcolor: 'background.paper',
   };
 
+  const person = "Ivan";
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <Box sx={{ position: 'relative' }}>
-        <div onClick={handleClick}>
-         Виктор: <PersonIcon/>
+        <div className='person_inner' onClick={handleClick}>
+          <div>{person}</div><PersonIcon/>
         </div>
         {open ? (
           <Box sx={styles}>
