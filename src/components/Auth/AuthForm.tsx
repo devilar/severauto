@@ -3,7 +3,7 @@ import Form from '../Form/Form';
 import { Input } from '../Input/Input';
 import {useForm} from "react-hook-form";
 import * as yup from 'yup';
-import {PrimaryButton} from '../Button/Button';
+import {PrimaryButton} from '../Button/PrimaryButton';
 import { Container } from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
 import { tarbarsss } from '../Lang/lang';

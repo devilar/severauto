@@ -4,10 +4,11 @@ import ClickAway from './Test';
 
 const HeaderProfile = () => {
   return (
-    <div>
-      HeaderProfile
+    <div className='HeaderProfile_container'>
+
 
     <ClickAway/>
+
 
 
     </div>

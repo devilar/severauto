@@ -1,1 +1,14 @@
-.sidebar{background:green;}
+.sidebar{background:#000000;padding:10px;height:100vh;
+
+  .logo{
+    text-align:center;
+    margin:20px 0;
+  }
+
+  button{
+    margin:5px 0;
+  }
+  button.active{
+    background:green;
+  }
+}

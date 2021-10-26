@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from '../Form/Form';
 import { Input } from '../Input/Input';
 import {useForm} from "react-hook-form";
 import * as yup from 'yup';
-import {PrimaryButton} from '../Button/Button';
-import { Container } from '@mui/material';
+import {PrimaryButton} from '../Button/PrimaryButton';
+import { Alert, Container } from '@mui/material';
 import {yupResolver} from '@hookform/resolvers/yup';
-import ErrorContainer from '../ErrorContainer/ErrorContainer';
 import axios from 'axios';
 
 const schema = yup.object().shape({
@@ -17,10 +16,12 @@ const schema = yup.object().shape({
 
 const RegForm = () => {
 
+  const[message,setMessage] = useState('');
+
   const submitHandler = (data) => {
     axios.post(`https://jsonplaceholder.typicode.com/users`, { id:1, title:'sar'})
       .then(res => {
-        console.log('test',res.data);
+        setMessage('Ошибка №68');
       })
   }
 
@@ -33,7 +34,7 @@ const RegForm = () => {
     <div>
       <Container maxWidth="sm">
 
-      <ErrorContainer/>
+        {message&& <Alert style={{marginTop:'10px'}} variant="filled" severity="error" children={message}/>}
 
       <Form onSubmit={handleSubmit(submitHandler)}>
         <Input
