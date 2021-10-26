@@ -11,7 +11,8 @@ import axios from 'axios';
 const schema = yup.object().shape({
   login:yup.string().min(3).max(10).required("Обязательное поле"),
   password:yup.string().min(6).max(20).required("Обязательное поле"),
-  repeatPassword:yup.string().min(6).max(20).required("Обязательное поле")
+  repeatPassword:yup.string().min(6).required('Confirm Password is required')
+    .oneOf([yup.ref('password')], 'Passwords must match')
 });
 
 const RegForm = () => {
@@ -36,37 +37,37 @@ const RegForm = () => {
 
         {message&& <Alert style={{marginTop:'10px'}} variant="filled" severity="error" children={message}/>}
 
-      <Form onSubmit={handleSubmit(submitHandler)}>
-        <Input
-          {...register('login')}
-          type="text"
-          id="login"
-          label="Введите логин"
-          name="login"
-          error={!!errors.login}
-          helperText={errors?.login?.message}/>
-        <Input
-          {...register('password')}
-          id="password"
-          type="password"
-          label="Пароль"
-          name="password"
-          error={!!errors.password}
-          helperText={errors?.password?.message}
-        />
+        <Form onSubmit={handleSubmit(submitHandler)}>
+          <Input
+            {...register('login')}
+            type="text"
+            id="login"
+            label="Введите логин"
+            name="login"
+            error={!!errors.login}
+            helperText={errors?.login?.message}/>
+          <Input
+            {...register('password')}
+            id="password"
+            type="password"
+            label="Пароль"
+            name="password"
+            error={!!errors.password}
+            helperText={errors?.password?.message}
+          />
 
-        <Input
-          {...register('repeatPassword')}
-          id="repeatPassword"
-          type="password"
-          label="repeatPassword"
-          name="repeatPassword"
-          error={!!errors.repeatPassword}
-          helperText={errors?.repeatPassword?.message}
-        />
+          <Input
+            {...register('repeatPassword')}
+            id="repeatPassword"
+            type="password"
+            label="repeatPassword"
+            name="repeatPassword"
+            error={!!errors.repeatPassword}
+            helperText={errors?.repeatPassword?.message}
+          />
 
-        <PrimaryButton color="primary" fullWidth>Зарегестрироваться</PrimaryButton>
-      </Form>
+          <PrimaryButton color="primary" fullWidth>Зарегестрироваться</PrimaryButton>
+        </Form>
       </Container>
 
     </div>
