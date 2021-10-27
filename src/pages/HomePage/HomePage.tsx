@@ -2,12 +2,16 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+//import Button from "material-dashboard-react/src/components/CustomButtons/Button.js";
+
 const HomePage = () => {
   return (
     <>
     <Header/>
 
       <h2>Страницы</h2>
+
+
 
       <nav>
         <ul>

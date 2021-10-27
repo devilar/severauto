@@ -35,7 +35,9 @@ const RegForm = () => {
             label="Введите логин"
             name="login"
             error={!!errors.login}
-            helperText={errors?.login?.message}/>
+            helperText={errors?.login?.message}
+            tooltip='Длинна логина должна быть от 5 до 30 символов. Логин должен содержать только буквы Латинского алфавита и не должен состоять только из цифр. Может содержать элементы пунктуации (-_.).Логин не может содержать пробел или заканчиваться точкой'
+          />
           <Input
             {...register('password')}
             id="password"
@@ -44,6 +46,12 @@ const RegForm = () => {
             name="password"
             error={!!errors.password}
             helperText={errors?.password?.message}
+            tooltip='Длинна пароля не должна быть менее 8
+символов. В пароле должны обязательно
+быть буквы верхнего регистра, быквы
+нижнего регистра, цифры или спец символы
+(!,@,#,$,&,*,% и т.п.)
+'
           />
 
           <PrimaryButton fullWidth>Авторизироваться</PrimaryButton>

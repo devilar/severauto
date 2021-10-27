@@ -48,6 +48,7 @@ const RegForm = () => {
             error={!!errors.login}
             helperText={errors?.login?.message}/>
 
+
           <Input
             {...register('password')}
             id="password"
@@ -66,6 +67,7 @@ const RegForm = () => {
             name="repeatPassword"
             error={!!errors.repeatPassword}
             helperText={errors?.repeatPassword?.message}
+            tooltip='test test!'
           />
 
           <PrimaryButton color="primary" fullWidth>Зарегистрироваться</PrimaryButton>

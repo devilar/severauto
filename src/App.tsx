@@ -23,6 +23,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Auth from './pages/Auth/Auth';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import Loader from './components/Loader/Loader';
+import Remains from './pages/Admin/inner/Remains/Remains';
 
 
 
@@ -36,7 +37,12 @@ export const App = () => {
         <Route exact path="/" component={HomePage}/>
 
         <Route path='/registration' component={Registration} />
-        <Route path='/admin' component={Admin} />
+        <Route exact path='/admin' component={Admin} />
+        <Route path='/admin/remains' component={Remains} />
+        <Route path='/admin/suppliers' component={Remains} />
+        <Route path='/admin/stock' component={Remains} />
+        <Route path='/admin/employees' component={Remains} />
+        <Route path='/admin/contracts' component={Remains} />
         <Route path='/auth' component={Auth} />
         <Route path='/forgotpassword' component={ForgotPassword} />
         <Route component={NotFound}/>

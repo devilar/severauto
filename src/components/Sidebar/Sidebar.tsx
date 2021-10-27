@@ -16,11 +16,11 @@ const Sidebar = () => {
 
       <nav>
         <ul>
-          <li><Btn fullWidth className='active'><Link to="/admin/ostatki">Остатки</Link></Btn> </li>
-          <li><Btn fullWidth><Link to="/admin/postavshiki">Поставщики</Link></Btn></li>
+          <li><Btn fullWidth className='active'><Link to="/admin/remains">Остатки</Link></Btn> </li>
+          <li><Btn fullWidth><Link to="/admin/suppliers">Поставщики</Link></Btn></li>
           <li><Btn fullWidth><Link to="/admin/stock">Склады</Link></Btn></li>
-          <li><Btn fullWidth><Link to="/admin/sotrudniki">Сотрудники</Link></Btn></li>
-          <li><Btn fullWidth><Link to="/admin/dogovori">Договоры</Link></Btn></li>
+          <li><Btn fullWidth><Link to="/admin/employees">Сотрудники</Link></Btn></li>
+          <li><Btn fullWidth><Link to="/admin/contracts">Договоры</Link></Btn></li>
         </ul>
       </nav>
     </div>
