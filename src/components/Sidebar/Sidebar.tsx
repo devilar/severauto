@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
 
-      <div className='logo'><Image src={logo}/></div>
+      <div className='logo'><Link to='/'><Image src={logo}/></Link></div>
 
       <nav>
         <ul>

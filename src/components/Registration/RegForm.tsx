@@ -38,6 +38,7 @@ const RegForm = () => {
         {message&& <Alert style={{marginTop:'10px'}} variant="filled" severity="error" children={message}/>}
 
         <Form onSubmit={handleSubmit(submitHandler)}>
+
           <Input
             {...register('login')}
             type="text"
@@ -46,11 +47,12 @@ const RegForm = () => {
             name="login"
             error={!!errors.login}
             helperText={errors?.login?.message}/>
+
           <Input
             {...register('password')}
             id="password"
             type="password"
-            label="Пароль"
+            label="Введите пароль"
             name="password"
             error={!!errors.password}
             helperText={errors?.password?.message}
@@ -60,13 +62,13 @@ const RegForm = () => {
             {...register('repeatPassword')}
             id="repeatPassword"
             type="password"
-            label="repeatPassword"
+            label="Повторите пароль"
             name="repeatPassword"
             error={!!errors.repeatPassword}
             helperText={errors?.repeatPassword?.message}
           />
 
-          <PrimaryButton color="primary" fullWidth>Зарегестрироваться</PrimaryButton>
+          <PrimaryButton color="primary" fullWidth>Зарегистрироваться</PrimaryButton>
         </Form>
       </Container>
 

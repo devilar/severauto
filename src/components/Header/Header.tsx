@@ -15,7 +15,7 @@ const Header = ({...props}) => {
   return (
     <Grid className='header' container height='100px' alignItems='center' {...props}>
 
-      <div className='logo'><Link to='/'><Image height='60px' src={logo}/></Link></div>
+      {!props.noLogo && <div className='logo'><Link to='/'><Image height='60px' src={logo}/></Link></div>}
       <Grid spacing={0} item xs={10}><Typography align='center' component="h2" variant="h3" color="white">Название портала</Typography></Grid>
       <Grid spacing={0} item xs={2}><HeaderProfile/></Grid>
 

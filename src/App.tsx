@@ -40,6 +40,7 @@ export const App = () => {
         <Route path='/auth' component={Auth} />
         <Route path='/forgotpassword' component={ForgotPassword} />
         <Route component={NotFound}/>
+
       </Switch>
 
 
@@ -47,9 +48,6 @@ export const App = () => {
 
     </BrowserRouter>
 
-
-
   )
-
 
 };

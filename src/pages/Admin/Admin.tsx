@@ -11,7 +11,7 @@ const Admin = () => {
    <Box display="grid" gridTemplateColumns="200px 1fr">
      <div><Sidebar/></div>
      <div>
-      <Header/>
+      <Header noLogo={true}/>
       admin
       <Footer/>
      </div>
