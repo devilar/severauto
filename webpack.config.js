@@ -8,7 +8,7 @@ module.exports = {
         historyApiFallback: true,
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: [ '.tsx', '.ts', '.js' , 'jsx'],
     },
     mode:"development",
     entry:('./src/index.tsx'),
@@ -21,11 +21,15 @@ module.exports = {
         new CleanWebpackPlugin()],
 
     module: {
+
+
+
         rules: [
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
+
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [
@@ -44,7 +48,17 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /\.js?$/,
 
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options:{
+                        presets: ['react', 'es2015']
+                    }
+                }
+            },
 
             {
                 test: /\.s[ac]ss$/i,
@@ -59,6 +73,7 @@ module.exports = {
             }
 
         ],
+
     },
 
 }

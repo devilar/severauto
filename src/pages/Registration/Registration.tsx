@@ -10,7 +10,6 @@ const Registration = () => {
 
   <RegForm/>
 
-    <Footer/>
     </>
   );
 };

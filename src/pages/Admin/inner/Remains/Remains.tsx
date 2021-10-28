@@ -81,7 +81,6 @@ const Remains = () => {
         <Button>Показать</Button>
 
       </Container>
-      <Footer/>
       </div>
     </Box>
   );

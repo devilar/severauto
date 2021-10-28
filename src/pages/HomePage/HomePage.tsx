@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-//import Button from "material-dashboard-react/src/components/CustomButtons/Button.js";
+import Button from "material-dashboard-react/src/components/CustomButtons/Button.js";
 
 const HomePage = () => {
   return (
@@ -11,7 +10,7 @@ const HomePage = () => {
 
       <h2>Страницы</h2>
 
-
+      <Button type="button" color="primary">Primary</Button>
 
       <nav>
         <ul>
@@ -23,7 +22,6 @@ const HomePage = () => {
       </nav>
 
 
-      <Footer/>
     </>
   );
 };

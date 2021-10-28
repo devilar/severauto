@@ -11,7 +11,6 @@ const ForgotPassword = () => {
 
       <ForgotPasswordForm/>
 
-      <Footer/>
     </>
   );
 };

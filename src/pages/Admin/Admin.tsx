@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import RegForm from '../../components/Registration/RegForm';
-import Footer from '../../components/Footer/Footer';
 import Grid from '@mui/material/Grid';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Box from '@mui/material/Box';
@@ -13,7 +12,6 @@ const Admin = () => {
      <div>
       <Header noLogo={true}/>
       admin
-      <Footer/>
      </div>
    </Box>
   );

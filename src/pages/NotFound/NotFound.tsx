@@ -10,7 +10,6 @@ const NotFound = () => {
 
       Error 404
 
-      <Footer/>
     </>
   );
 };
